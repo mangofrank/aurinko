@@ -16,10 +16,5 @@ pipeline {
         }
       }
     }
-    stage('error') {
-      steps {
-        mail(subject: 'terve', body: 'Moikka, Mitäs kuuluu? T kurssikaveri', from: 'jarmo.kalsi@gmail.com', to: 'ville.hedstrom@gmail.com')
-      }
-    }
   }
 }
