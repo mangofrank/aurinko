@@ -5,20 +5,20 @@ pipeline {
       parallel {
         stage('Build') {
           steps {
-            sh '''cat README.md
-&& echo '''
+            sh '''cat README.md && echo terve
+ '''
           }
         }
-        stage('') {
+        stage('error') {
           steps {
             sleep(unit: 'SECONDS', time: 3)
           }
         }
       }
     }
-    stage('') {
+    stage('error') {
       steps {
-        mail(subject: 'terve', body: 'Moikka, Mit‰s kuuluu? T kurssikaveri', from: 'jarmo.kalsi@gmail.com', to: 'ville.hedstrom@gmail.com')
+        mail(subject: 'terve', body: 'Moikka, Mit√§s kuuluu? T kurssikaveri', from: 'jarmo.kalsi@gmail.com', to: 'ville.hedstrom@gmail.com')
       }
     }
   }
